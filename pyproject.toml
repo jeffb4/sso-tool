@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "sso"
+version = "0.1.0"
+description = "sso command line utility"
+authors = ["Jeff Bachtel <jeff.bachtel@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+click = "^7.1.2"
+boto3 = "^1.17.51"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.3"
+pytest-cov = "^2.11.1"
+pytest-pythonpath = "^0.7.3"
+black = "^20.8b1"
+pylint = "^2.7.4"
+mypy = "^0.812"
+isort = "^5.8.0"
+
+[tool.poetry.scripts]
+sso = "sso.cli:cli"
+
+[tool.black]
+line-length = 120
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
